@@ -9,4 +9,8 @@ post '/create', to: 'books#create'
 
 get '/books/:id', to: 'books#show'
 
+get '/books/:id/edit', to: 'books#edit'
+
+put '/books/:id', to: 'books#update'
+
 end

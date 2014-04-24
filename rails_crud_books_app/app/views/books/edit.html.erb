@@ -1,0 +1,33 @@
+<h1>Edit Book</h1>
+
+<form action="/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="put" />
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+
+
+<p>
+  <label for="name_of_book" class="form-label">Name of Book</label>
+  <input name="book[name_of_book]" id="name_of_book" value="<%= @book.name_of_book %>">
+</p>
+
+<p>
+  <label for="author_of_book" class="form-label">Author of Book</label>
+  <input name="book[author_of_book]" id="author_of_book" value="<%= @book.author_of_book %>">
+</p>
+
+<p>
+  <label for="year_book_was_published" class="form-label">Year Book was Published</label>
+  <input name="book[year_book_was_published]" id="year_book_was_published" value="<%= @book.year_book_was_published %>">
+</p>
+
+<p>
+  <input type="submit" value="Update Book" class="form-button"
+</p>
+
+</form>
+
+
+
+<!--fill_in "Name of Book", with: "Lord of the Rings"-->
+<!--fill_in "Author of Book", with: "J.R.R. Tolkien"-->
+<!--fill_in "Year Book was Published", with: "1954"-->
