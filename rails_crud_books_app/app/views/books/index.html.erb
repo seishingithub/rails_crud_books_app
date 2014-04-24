@@ -1,0 +1,30 @@
+<a class="nav-link" href="/books/new">Add New Book</a>
+
+<h1> Books </h1>
+
+<table class="table-standard">
+  <thead>
+  <tr>
+    <th>Name of Book</th>
+    <th>Author of Book</th>
+    <th>Year Book was Published</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @books.each do |book| %>
+    <tr>
+      <td>
+
+        <%= book.name_of_book %>
+
+      </td>
+      <td>
+        <%= book.author_of_book %>
+      </td>
+      <td>
+        <%= book.year_book_was_published %>
+      </td>
+    </tr>
+    <% end %>
+    </tbody>
+    </table>
