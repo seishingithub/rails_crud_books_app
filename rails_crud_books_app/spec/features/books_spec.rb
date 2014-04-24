@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "Managing Books" do
-  scenario "User creates a book" do
+  scenario "User creates and edits and deletes a book" do
     visit '/'
     click_on "Add New Book"
     fill_in "Name of Book", with: "Lord of the Rings"
@@ -31,5 +31,10 @@ feature "Managing Books" do
     expect(page).to have_content("The Good Earth")
     expect(page).to have_content("Pearl S. Buck")
     expect(page).to have_content("1932")
+
+    click_on "Delete"
+    expect(page).to have_no_content("The Good Earth")
+    expect(page).to have_no_content("Pearl S. Buck")
+    expect(page).to have_no_content("1932")
   end
 end

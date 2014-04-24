@@ -4,6 +4,12 @@
 
 <h1> Showing Book </h1>
 
+<form action="/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <input type="submit" value="Delete">
+</form>
+
 <dl class="attributes">
   <dt>Name of Book</dt>
   <dd><%= @book.name_of_book %></dd>

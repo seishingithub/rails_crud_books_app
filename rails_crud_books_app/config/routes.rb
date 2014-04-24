@@ -13,4 +13,6 @@ get '/books/:id/edit', to: 'books#edit'
 
 put '/books/:id', to: 'books#update'
 
+delete '/books/:id', to: 'books#destroy'
+
 end
