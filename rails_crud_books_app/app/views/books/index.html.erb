@@ -14,9 +14,9 @@
   <% @books.each do |book| %>
     <tr>
       <td>
-
+       <a href="/books/<%= book.id %>">
         <%= book.name_of_book %>
-
+       </a>
       </td>
       <td>
         <%= book.author_of_book %>

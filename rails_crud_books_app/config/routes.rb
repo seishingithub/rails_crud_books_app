@@ -7,4 +7,6 @@ get '/books/new', to: 'books#new'
 
 post '/create', to: 'books#create'
 
+get '/books/:id', to: 'books#show'
+
 end
