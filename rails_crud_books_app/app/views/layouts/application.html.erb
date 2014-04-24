@@ -2,13 +2,21 @@
 <html>
 <head>
   <title>RailsCrudBooksApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
-
+<header>
+  <div class="container-inner">
+    <a class="brand" href="/books">DRY w/ Rails</a>
+  </div>
+</header>
+<main>
+  <div class="container-inner">
+    <%= yield %>
+  </div>
+</main>
 </body>
 </html>
